@@ -1,8 +1,28 @@
 Visualise a Lanyrd.com events page with a force directed graph (via ProtoVis) as a javascripted web page - shows you an interactive network of who-knows-who at an event.
 
+python get_lanyrd_data.py
+goes to http://lanyrd.com/2010/barcamp-brighton/ and uses regexps to extract list of attendees as twitter screen names, pickles result as lanyrd_attendees.pickle
+NOTE you might have to run this several times, it'll use Twitter's 150 API requests per hour quite quickly and for any larger event (e.g. >20 people) you'll run out of the hour's requests. Just re-run it and it'll pick-up where it left off.
+
+python get_friends.py
+loads lanyrd_attendees.pickle, it will build attendee_friends.pickle as it goes. 
+it calls twitter for each screen_name in the previous step and gets their friends (along with a lot of other json data from twitter). attendee_friends.pickle will be 40mb for Bar Camp Brighton 5. if it runs out of twitter api calls (150/hr) then it'll die without damaging anything, just run it again later (it'll tell you how many mins are left until the api limit is reset) and it'll pick up until complete
+
+python make_graph.py
+reads the large attendee_friends.pickle and lanyrd_attendees.pickle, builds links and nodes which is output as JSON to graph.json
+
+cp graph.js SocialGraphVis
+copy the generated graph.js file into the HTML directory, then open lanyard.html in your browser to see the graph
+customise logo.png and lanyard.html to fit the event you're visualising (it is set to BarCampBrighton5)
+
 Credit:
 Idea - Kyran Dale and Ian Ozsvald
 Data grab & graph - Ian Ozsvald
 ProtoVis/JS visualisation - Kyran Dale
 http://IanOzsvald.com
 http://ShowMeDo.com/about (Kyran)
+
+Uses:
+http://Lanyrd.com
+http://vis.stanford.edu/protovis/
+Python 2.5 or above
