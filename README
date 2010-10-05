@@ -1,4 +1,5 @@
-Visualise a Lanyrd.com events page with a force directed graph (via ProtoVis) as a javascripted web page - shows you an interactive network of who-knows-who at an event.
+Visualise a Lanyrd.com events page with a force directed graph (via ProtoVis) as a javascripted web page - shows you an interactive network of who-knows-who at an event. See this write-up for live demos:
+http://ianozsvald.com/2010/10/05/visualising-lanyrds-social-connectivity-graph/
 
 python get_lanyrd_data.py
 goes to http://lanyrd.com/2010/barcamp-brighton/ and uses regexps to extract list of attendees as twitter screen names, pickles result as lanyrd_attendees.pickle
