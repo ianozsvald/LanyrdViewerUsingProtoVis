@@ -1,0 +1,8 @@
+Visualise a Lanyrd.com events page with a force directed graph (via ProtoVis) as a javascripted web page - shows you an interactive network of who-knows-who at an event.
+
+Credit:
+Idea - Kyran Dale and Ian Ozsvald
+Data grab & graph - Ian Ozsvald
+ProtoVis/JS visualisation - Kyran Dale
+http://IanOzsvald.com
+http://ShowMeDo.com/about (Kyran)
