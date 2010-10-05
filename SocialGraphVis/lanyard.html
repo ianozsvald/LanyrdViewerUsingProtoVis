@@ -1,0 +1,51 @@
+    <title>Lanyard</title>
+  <head>
+    <script type="text/javascript" src="protovis-r3.2.js"></script>
+    <script type="text/javascript" src="graph.js"></script>
+    <style type="text/css">
+      body{
+      font-family:Verdana;
+      font-size:12px;
+      }
+
+      .logo {
+      height:300px;
+      position:absolute;
+      width:250px;
+      z-index:10;
+      }
+
+      #lanyardLogo{
+      margin-left:-83px;
+      margin-top:-75px;
+      }
+
+      .logo #bclogo{
+      }
+      
+      img{ 
+      border: None;
+      }
+
+      #title{
+      font-size:20px;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <p class="logo"><a href="/"><img id='lanyardLogo' alt="Lanyrd. The social conference directory" src="LanyrdLogo.png"></a>
+        <a href="/"><img id='bclogo' alt="Conference Logo" src="logo.png"></a><br/>  
+      An intuitive approach to network layout is to model the graph as a physical system: nodes are charged particles that repel each other, and links are dampened springs that pull related nodes together. A physical simulation of these forces then determines node positions; approximation techniques that avoid computing all pairwise forces enable the layout of large numbers of nodes. In addition, interactivity allows the user to direct the layout and jiggle nodes to disambiguate links. Such a force-directed layout is a good starting point for understanding the structure of a general undirected graph.
+    </p>
+    <div id="center">
+      <div id="fig">
+        <center id="title">
+          Visualizing BarCampBrighton5's Social Graph Connectivity
+        </center>
+        <script type="text/javascript" src="lanyard.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
+    
